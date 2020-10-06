@@ -4,12 +4,13 @@
   "description": "Default react app structure",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config config/webpack.config.js",
-    "watch": "webpack-dev-server --config config/webpack.config.js",
+    "build": "webpack --mode production --config config/webpack.config.js",
+    "watch": "webpack-dev-server --mode development --config config/webpack.config.js",
     "test": "echo \"There is no tests\"",
     "lint": "eslint './src/*.{js,ts,tsx}'",
     "docker:build": "docker build --t react-template-app .",
-    "docker:run": "docker run --name react-template-app -t -p 8080:8080 react-template-app"
+    "docker:run": "docker run --name react-template-app -t -p 8080:8080 react-template-app",
+    "docker:watch": "docker-compose up"
   },
   "repository": {
     "type": "git",

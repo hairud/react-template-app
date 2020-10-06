@@ -4,7 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const config = {
   entry: path.resolve(__dirname, '..', 'src'),
   output: {
-    filename: 'bundle.js',
+    publicPath: '/',
+    filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, '..', 'dist'),
   },
   resolve: {
@@ -24,7 +25,7 @@ const config = {
     }),
   ],
   devServer: {
-    port: 8081,
+    port: 8080,
     progress: true,
     publicPath: '/',
     host: '0.0.0.0',
