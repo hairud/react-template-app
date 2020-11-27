@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production --config config/webpack.config.js",
-    "watch": "webpack-dev-server --mode development --config config/webpack.config.js",
+    "start": "webpack-dev-server --mode development --config config/webpack.config.js",
     "test": "jest",
     "lint": "eslint './src/*.{js,ts,tsx}'",
     "docker:start": "docker-compose up"
@@ -26,8 +26,7 @@
   ],
   "dependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
